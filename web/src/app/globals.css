@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #f5f5f7;
+}
+
+html {
+  background-color: #000000;
+  height: 100%;
+}
+
+body {
+  background-color: #000000;
+  color: var(--foreground);
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Mencegah glitch putih/abu saat overscroll di HP */
+  overscroll-behavior-y: none; 
+}
+
+/* Apple Style Scrollbar (Hidden) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
