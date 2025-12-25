@@ -17,13 +17,13 @@ interface Drama {
 export default function HomePage() {
   const { data: latest = [], isLoading: loadingLatest } = useQuery({
     queryKey: ['latest'],
-    queryFn: api.getLatest,
+    queryFn: () => api.getLatest(), // Pake arrow function biar aman
     select: (data) => data.slice(0, 12)
   });
 
   const { data: trending = [], isLoading: loadingTrending } = useQuery({
     queryKey: ['trending'],
-    queryFn: api.getTrending,
+    queryFn: () => api.getTrending(), // Pake arrow function juga
     select: (data) => data.slice(0, 10)
   });
 
