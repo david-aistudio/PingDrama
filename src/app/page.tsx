@@ -61,8 +61,8 @@ export default function HomePage() {
 
   return (
     <div className="bg-black min-h-screen pb-32">
-      {/* Immersive Hero Carousel */}
-      <section className="relative w-full h-[95vh] overflow-hidden">
+      {/* Immersive Hero Carousel - Shortened Height */}
+      <section className="relative w-full h-[75vh] overflow-hidden">
         
         {/* Logo - Fixed Position */}
         <div className="absolute top-0 left-0 z-40">
